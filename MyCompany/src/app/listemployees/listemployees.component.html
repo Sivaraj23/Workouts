@@ -1,0 +1,21 @@
+<h3>Please choose the Competency level to display employees in that competency level</h3>
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Competencies
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <div *ngFor="let item of competencies">
+            <a class="dropdown-item" (click)="filterOnly($event)">{{item}}</a>
+        </div>
+    </div>
+</div>
+<div >
+    <table>
+        <tr *ngFor="let item of listToDisplay">
+           <td><h1> {{item[0]}} </h1></td>
+           <td><h1> &nbsp; is having experience of {{item[1]}} years </h1></td>
+           <td><h1>&nbsp; in the designation {{item[2]}} </h1></td>
+        </tr>
+    </table>
+</div>
