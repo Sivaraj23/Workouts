@@ -19,13 +19,13 @@ export class ListemployeesComponent implements OnInit {
      this.http.get("../../assets/emplist.csv", { responseType: 'text' }).subscribe(data => {
       this.list = this.stringToJson(data);
       this.list.pop();
-      console.log(this.list)
+
     });
   }
 
   filterOnly(event: Event) {
     this.listToDisplay=[];
-    this.list.forEach(emp=>{
+    this.list.forEach(emp=>{ 
       let something : any=event.srcElement;
       if(emp[3].trim()==something.text)
          this.listToDisplay.push(emp);
