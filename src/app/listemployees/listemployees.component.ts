@@ -26,7 +26,8 @@ export class ListemployeesComponent implements OnInit {
   filterOnly(event: Event) {
     this.listToDisplay=[];
     this.list.forEach(emp=>{
-      if(emp[3].trim()==event.srcElement.text.trim())
+      let something : any=event.srcElement;
+      if(emp[3].trim()==something.text)
          this.listToDisplay.push(emp);
     })
    
