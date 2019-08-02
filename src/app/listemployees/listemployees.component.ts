@@ -22,7 +22,7 @@ export class ListemployeesComponent implements OnInit {
 
     });
   }
-
+  
   filterOnly(event: Event) {
     this.listToDisplay=[];
     this.list.forEach(emp=>{ 
